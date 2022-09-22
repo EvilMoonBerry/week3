@@ -9,12 +9,15 @@ let thead = document.getElementById("thead");
 let title1 = document.createElement("th");
 let title2 = document.createElement("th");
 let title3 = document.createElement("th");
+let title4 = document.createElement("th");
 title1.innerText = "Municipality";
 thead.appendChild(title1);
 title2.innerText = "Population";
 thead.appendChild(title2);
 title3.innerText = "Employment";
 thead.appendChild(title3);
+title4.innerText = "Employment-%";
+thead.appendChild(title4);
 
 table.appendChild(thead);
 table.appendChild(tbody);
@@ -43,13 +46,21 @@ async function getData() {
     let cell1 = document.createElement("td");
     let cell2 = document.createElement("td");
     let cell3 = document.createElement("td");
+    let cell4 = document.createElement("td");
+    let y = divide(empValue[i], cityValueJSON[i]);
 
     cell1.innerText = x[i];
     cell2.innerText = cityValueJSON[i];
     cell3.innerText = empValue[i];
+    cell4.innerText = y + "%";
     row.appendChild(cell1);
     row.appendChild(cell2);
     row.appendChild(cell3);
+    row.appendChild(cell4);
     tbody.appendChild(row);
   }
+}
+function divide(a, b) {
+  let o = (a / b) * 100;
+  return o.toFixed(2);
 }

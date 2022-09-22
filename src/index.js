@@ -2,7 +2,7 @@ import "./styles.css";
 let table = document.getElementById("table");
 let tbody = document.getElementById("tbody");
 let thead = document.getElementById("thead");
-let body = document.getElementById("body");
+//let body = document.getElementById("body");
 
 let title1 = document.createElement("th");
 let title2 = document.createElement("th");
@@ -14,7 +14,7 @@ thead.appendChild(title2);
 table.appendChild(thead);
 table.appendChild(tbody);
 
-body.appendChild(table);
+//body.appendChild(table);
 
 async function getData() {
   const url =

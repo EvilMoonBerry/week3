@@ -24,9 +24,11 @@ table {
   margin: auto;
   padding: 60px;
   width: 60%;
-  text-align: center;
 }
 
+.center h1 {
+  text-align: center;
+}
 
 tr:nth-child(even) {
   background-color: #f2f2f2;

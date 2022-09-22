@@ -35,7 +35,7 @@ async function getData() {
     cell2.innerText = cityValueJSON[i];
     row.appendChild(cell1);
     row.appendChild(cell2);
-    table.appendChild(row);
+    tbody.appendChild(row);
   }
 }
 

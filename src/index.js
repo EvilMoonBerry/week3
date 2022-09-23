@@ -53,6 +53,13 @@ async function getData() {
     cell2.innerText = cityValueJSON[i];
     cell3.innerText = empValue[i];
     cell4.innerText = y + "%";
+    //how to style background colcor. Help from https://www.w3schools.com/jsref/prop_style_background.asp
+    if (y > 45) {
+      row.style.backgroundColor = "#abffbd";
+    }
+    if (y < 25) {
+      row.style.backgroundColor = "#ff9e9e";
+    }
     row.appendChild(cell1);
     row.appendChild(cell2);
     row.appendChild(cell3);
@@ -61,6 +68,7 @@ async function getData() {
   }
 }
 function divide(a, b) {
+  // how to round decimals? Help from https://www.w3schools.com/jsref/jsref_tofixed.asp
   let o = (a / b) * 100;
   return o.toFixed(2);
 }
